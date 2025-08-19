@@ -342,7 +342,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const whatsappLink = document.querySelector('a[href*="wa.me"]');
     if (whatsappLink) {
         whatsappLink.addEventListener('click', function() {
-            // Track WhatsApp clicks for analytics
             if ('gtag' in window) {
                 gtag('event', 'contact', {
                     'event_category': 'engagement',
@@ -352,7 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // INSTAGRAM LINK TRACKING
     const instagramLink = document.querySelector('a[href*="instagram.com"]');
     if (instagramLink) {
         instagramLink.addEventListener('click', function() {
@@ -367,7 +365,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// CSS ANIMATIONS AND KEYFRAMES (Injected dynamically)
 const dynamicStyles = `
 /* MOVING STARS ANIMATION */
 @keyframes moveStar {
@@ -508,7 +505,6 @@ nav a:focus,
 }
 `;
 
-// Inject the dynamic styles
 if (!document.getElementById('dynamic-styles')) {
     const styleSheet = document.createElement('style');
     styleSheet.id = 'dynamic-styles';
